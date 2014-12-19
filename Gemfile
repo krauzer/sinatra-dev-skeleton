@@ -1,4 +1,7 @@
 
+# PostgreSQL driver
+gem 'pg'
+
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
