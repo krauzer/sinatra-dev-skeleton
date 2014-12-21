@@ -124,6 +124,12 @@ namespace :db do
       system "rake db:migrate RACK_ENV=test"
     end
   end
-
 end
+
+desc 'Start IRB with application environment loaded'
+task "console" do
+  exec "irb -r./config/environment"
+end
+
+task :default  => :spec
 
