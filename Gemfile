@@ -22,6 +22,11 @@ group :test do
   gem 'capybara'
 end
 
+group :development do
+  gem "rack-livereload"
+  gem "guard-livereload"
+end
+
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
