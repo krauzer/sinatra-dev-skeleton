@@ -1,0 +1,10 @@
+{
+  "name": "sinatra-dev-skeleton",
+  "version": "0.0.0",
+  "description": "work skeleton",
+  "repository": "https://github.com/krauzer/sinatra-dev-skeleton",
+  "main": "public/js/application.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
+}
