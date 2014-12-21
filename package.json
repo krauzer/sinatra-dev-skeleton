@@ -9,6 +9,7 @@
     // Install dev dependencies on the command line: "npm install DEPENDENCY --save-dev" for most up to date versions
     // DEVDEPENDENCIES:
                     // grunt
+                    // load-grunt-tasks
     },
   "scripts": {}
 }
