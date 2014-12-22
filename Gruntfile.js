@@ -6,7 +6,9 @@ module.exports = function(grunt) {
 
   var app = {
     src: "public/js/src/",
-    dist: "publc/js/"
+    dist: "publc/js/",
+    cssSrc: "public/css/src",
+    cssDist: "public/css/"
   };
 
   grunt.initConfig({
@@ -59,6 +61,14 @@ module.exports = function(grunt) {
       minify: {
         files: {
           '<%= app.dist%>.application.min.js': ['<%= app.dist%>.application.min.js']
+        }
+      }
+    },
+
+    cssmin: {
+      minify: {
+        files : {
+          '<%=app.cssDist%>.application.min.css' : ['<%=app.cssSrc%>*.css']
         }
       }
     }
