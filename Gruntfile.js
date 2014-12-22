@@ -42,6 +42,18 @@ module.exports = function(grunt) {
         src: ['<%= browserify.dev.src%>'],
         dest: '<%=app.dist%>application.js'
       }
+    },
+
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+      src: [
+            'Gruntfile.js',
+           '<%= app.src %>/*.js'
+      ]
     }
+
   });
 };
