@@ -53,6 +53,14 @@ module.exports = function(grunt) {
             'Gruntfile.js',
            '<%= app.src %>/*.js'
       ]
+    },
+
+    uglify: {
+      minify: {
+        files: {
+          '<%= app.dist%>.application.min.js': ['<%= app.dist%>.application.min.js']
+        }
+      }
     }
 
   });
