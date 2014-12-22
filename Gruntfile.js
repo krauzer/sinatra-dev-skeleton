@@ -65,10 +65,20 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: ['> 1%', 'last 2 versions']
+      },
+      dist: {
+        src: '<%=app.cssSrc%>*.css',
+        dest: 'tmp/styles/'
+      }
+    },
+
     cssmin: {
       minify: {
         files : {
-          '<%=app.cssDist%>.application.min.css' : ['<%=app.cssSrc%>*.css']
+          '<%=app.cssDist%>.application.min.css' : ['tmp/styles/*.css']
         }
       }
     }
