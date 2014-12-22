@@ -4,5 +4,15 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.initConfig({})
-}
+  var app = {
+    src: "public/js/src/",
+    dist: "publc/js/"
+  };
+
+  grunt.initConfig({
+    app: app,
+
+    pkg: grunt.file.readJSON('package.json')
+
+  });
+};
