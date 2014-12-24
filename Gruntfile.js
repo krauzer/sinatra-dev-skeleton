@@ -20,6 +20,15 @@ module.exports = function(grunt) {
       dev: 'tmp'
     },
 
+    concat: {
+      options: {
+        sourceMap: true
+      },
+      styles: {
+        files: { 'tmp/styles/application.css' : ['<%= app.cssSrc %>*.css']  }
+       }
+     },
+
     browserify: {
       options: {
         browserifyOptions: {
