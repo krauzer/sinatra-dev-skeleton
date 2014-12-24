@@ -19,6 +19,7 @@
                     // grunt-contrib-uglify
                     // grunt-contrib-cssmin
                     // grunt-autoprefixer
+                    // grunt-contrib-clean
     },
   "scripts": {}
 }
