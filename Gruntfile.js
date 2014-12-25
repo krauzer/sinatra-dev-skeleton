@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
+  require('time-grunt')(grunt);
 
   var app = {
     src: "public/js/src/",
