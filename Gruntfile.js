@@ -6,10 +6,13 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var app = {
-    src: "public/js/src/",
-    dist: "publc/js/",
-    cssSrc: "public/css/src",
-    cssDist: "public/css/"
+    codeSrc: "public/js/src/",
+    codeDist: "dist/js/",
+    stylesSrc: "public/css/src",
+    stylesDist: "dist/css/",
+    temp: "tmp",
+    tempCode: "tmp/js",
+    tempStyles: "tmp/styles"
   };
 
   grunt.initConfig({
@@ -18,7 +21,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      dev: 'tmp'
+      dev: '<%= app.temp %>'
     },
 
     concat: {
@@ -26,7 +29,7 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       styles: {
-        files: { 'tmp/styles/application.css' : ['<%= app.cssSrc %>*.css']  }
+        files: { '<%= app.tempStyles %>application.css' : ['<%= app.stylesSrc %>*.css']  }
        }
      },
 
@@ -46,8 +49,8 @@ module.exports = function(grunt) {
             alias : ['react']
           }
         },
-        src: ['<%=app.src%>application.js'],
-        dest: '<%=app.dist%>application.js'
+        src: ['<%=app.codeSrc%>application.js'],
+        dest: '<%=app.tempCode%>application.js'
       },
       production: {
         options: {
@@ -56,7 +59,7 @@ module.exports = function(grunt) {
           }
         },
         src: ['<%= browserify.dev.src%>'],
-        dest: '<%=app.dist%>application.js'
+        dest: '<%=app.codeDist%>application.js'
       }
     },
 
@@ -74,7 +77,7 @@ module.exports = function(grunt) {
     uglify: {
       minify: {
         files: {
-          '<%= app.dist%>.application.min.js': ['<%= app.dist%>.application.min.js']
+          '<%= app.codeDist%>.application.min.js': ['<%= app.codeDist%>.application.js']
         }
       }
     },
@@ -92,7 +95,7 @@ module.exports = function(grunt) {
     cssmin: {
       minify: {
         files : {
-          '<%=app.cssDist%>.application.min.css' : ['tmp/styles/*.css']
+          '<%=app.cssDist%>.application.min.css' : ['<%=app.cssSrc%>*.css']
         }
       }
     }
