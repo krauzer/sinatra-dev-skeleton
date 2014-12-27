@@ -8,7 +8,7 @@ module.exports = function(grunt) {
   var app = {
     codeSrc: "public/js/src/",
     codeDist: "dist/js/",
-    stylesSrc: "public/css/src",
+    stylesSrc: "public/css/src/",
     stylesDist: "dist/css/",
     temp: "tmp",
     codeTemp: "tmp/js/",
