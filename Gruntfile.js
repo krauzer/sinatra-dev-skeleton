@@ -11,8 +11,8 @@ module.exports = function(grunt) {
     stylesSrc: "public/css/src",
     stylesDist: "dist/css/",
     temp: "tmp",
-    tempCode: "tmp/js",
-    tempStyles: "tmp/styles"
+    codeTemp: "tmp/js/",
+    stylesTemp: "tmp/styles/"
   };
 
   grunt.initConfig({
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       styles: {
-        files: { '<%= app.tempStyles %>application.css' : ['<%= app.stylesSrc %>*.css']  }
+        files: { '<%= app.stylesTemp %>application.css' : ['<%= app.stylesSrc %>*.css']  }
        }
      },
 
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           }
         },
         src: ['<%=app.codeSrc%>application.js'],
-        dest: '<%=app.tempCode%>application.js'
+        dest: '<%=app.codeTemp%>application.js'
       },
       production: {
         options: {
