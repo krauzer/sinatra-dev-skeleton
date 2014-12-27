@@ -74,14 +74,6 @@ module.exports = function(grunt) {
       ]
     },
 
-    uglify: {
-      minify: {
-        files: {
-          '<%= app.codeDist%>.application.min.js': ['<%= app.codeDist%>.application.js']
-        }
-      }
-    },
-
     autoprefixer: {
       options: {
         browsers: ['> 1%', 'last 2 versions'],
@@ -89,14 +81,6 @@ module.exports = function(grunt) {
       },
       dev: {
         src: '<%=app.stylesTemp%>application.css'
-      }
-    },
-
-    cssmin: {
-      minify: {
-        files : {
-          '<%=app.cssDist%>.application.min.css' : ['<%=app.cssSrc%>*.css']
-        }
       }
     },
 
