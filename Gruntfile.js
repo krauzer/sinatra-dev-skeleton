@@ -105,13 +105,24 @@ module.exports = function(grunt) {
         files: ['<%= app.stylesSrc %>*.css'],
         tasks: ['concat:styles']
       }
+    },
+
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      dev: [
+      'browserify:dev',
+      'watch:styles'
+      ]
     }
 
   });
 
 grunt.registerTask('develop', [
     'clean:dev',
-    'concat:styles'
+    'concat:styles',
+    'concurrent:dev'
   ]);
 
 };

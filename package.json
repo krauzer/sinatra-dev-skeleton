@@ -23,6 +23,7 @@
                     // grunt-contrib-concat
                     // time-grunt
                     // grunt-contrib-watch
+                    // grunt-concurrent
     },
   "scripts": {}
 }
