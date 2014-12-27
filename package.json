@@ -22,6 +22,7 @@
                     // grunt-contrib-clean
                     // grunt-contrib-concat
                     // time-grunt
+                    // grunt-contrib-watch
     },
   "scripts": {}
 }

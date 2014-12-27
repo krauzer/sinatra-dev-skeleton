@@ -98,6 +98,13 @@ module.exports = function(grunt) {
           '<%=app.cssDist%>.application.min.css' : ['<%=app.cssSrc%>*.css']
         }
       }
+    },
+
+    watch: {
+      styles: {
+        files: ['<%= app.stylesSrc %>*.css'],
+        tasks: ['concat:styles']
+      }
     }
 
   });
