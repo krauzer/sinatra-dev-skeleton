@@ -84,11 +84,11 @@ module.exports = function(grunt) {
 
     autoprefixer: {
       options: {
-        browsers: ['> 1%', 'last 2 versions']
+        browsers: ['> 1%', 'last 2 versions'],
+        map: true
       },
-      dist: {
-        src: '<%=app.cssSrc%>*.css',
-        dest: 'tmp/styles/'
+      dev: {
+        src: '<%=app.stylesTemp%>application.css'
       }
     },
 
