@@ -35,6 +35,23 @@ module.exports = function(grunt) {
        }
      },
 
+     useminPrepare: {
+      options: {
+        dest: '<%= app.dist %>',
+        staging: '<%= app.temp %>',
+        flow: {
+          layout: {
+            steps: {
+              js: ['uglifyjs'],
+              css: ['cssmin']
+            },
+            post: {}
+          }
+        }
+      },
+      layout: "<%= app.layoutSrc %>layout.erb"
+     },
+
     browserify: {
       options: {
         browserifyOptions: {
