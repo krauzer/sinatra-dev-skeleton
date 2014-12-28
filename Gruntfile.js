@@ -6,13 +6,15 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var app = {
+    temp: "tmp",
+    dist: "dist",
     codeSrc: "public/js/src/",
+    codeTemp: "tmp/js/",
     codeDist: "dist/js/",
     stylesSrc: "public/css/src/",
+    stylesTemp: "tmp/styles/",
     stylesDist: "dist/css/",
-    temp: "tmp",
-    codeTemp: "tmp/js/",
-    stylesTemp: "tmp/styles/"
+    layoutSrc: "app/views/"
   };
 
   grunt.initConfig({
