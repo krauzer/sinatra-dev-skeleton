@@ -131,4 +131,11 @@ grunt.registerTask('develop', [
     'concurrent:dev'
   ]);
 
+grunt.registerTask('build', [
+    'clean:build',
+    'useminPrepare',
+    'concat:styles',
+    'cssmin:generated'
+  ]);
+
 };
