@@ -131,6 +131,17 @@ module.exports = function(grunt) {
       'browserify:dev',
       'watch:styles'
       ]
+    },
+
+    rev : {
+      build: {
+        files: {
+          src: [
+          '<%= app.codeDist %>*.js',
+          '<%= app.stylesDist %>*.css'
+          ]
+        }
+      }
     }
 
   });
@@ -149,6 +160,7 @@ grunt.registerTask('build', [
     'cssmin:generated',
     'browserify:production',
     'uglify',
+    'rev:build',
     'env:build'
   ]);
 
