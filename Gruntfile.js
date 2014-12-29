@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     codeDist: "dist/js/",
     stylesSrc: "public/css/src/",
     stylesTemp: "tmp/styles/",
-    stylesDist: "dist/css/",
+    stylesDist: "dist/styles/",
     layoutSrc: "app/views/"
   };
 
