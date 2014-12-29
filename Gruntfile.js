@@ -91,7 +91,7 @@ module.exports = function(grunt) {
           }
         },
         src: ['<%= browserify.dev.src%>'],
-        dest: '<%=app.codeDist%>application.js'
+        dest: '<%=app.codeTemp%>application.js'
       }
     },
 
