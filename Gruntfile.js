@@ -78,8 +78,7 @@ module.exports = function(grunt) {
           watch: true,
           keepAlive: true,
           browserifyOptions: {
-            verbose: true,
-            alias : ['react']
+            verbose: true
           }
         },
         src: ['<%=app.codeSrc%>application.js'],
