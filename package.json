@@ -6,25 +6,23 @@
   "main": "public/js/application.js",
   "dependencies": {},
   "devDependencies": {
-    // Install dev dependencies on the command line: "npm install DEPENDENCY --save-dev" for most up to date versions
-    // DEVDEPENDENCIES:
-                    // grunt
-                    // load-grunt-tasks
-                    // grunt-browserify
-                    // watchify
-                    // reactify (if using React)
-                    // grunt-contrib-jshint
-                    // jshint-stylish
-                    // grunt-contrib-uglify
-                    // grunt-contrib-cssmin
-                    // grunt-autoprefixer
-                    // grunt-contrib-clean
-                    // grunt-contrib-concat
-                    // time-grunt
-                    // grunt-contrib-watch
-                    // grunt-concurrent
-                    // grunt-usemin
-                    // grunt-env
-    },
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-browserify": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-env": "*",
+    "grunt-usemin": "*",
+    "jshint-stylish": "*",
+    "load-grunt-tasks": "*",
+    "reactify": "*",
+    "time-grunt": "*",
+    "watchify": "*"
+  },
   "scripts": {}
 }
