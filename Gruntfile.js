@@ -22,6 +22,17 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    env : {
+      dev: {
+        NODE_ENV : 'development',
+        DEST: '<%= app.codeTemp %>',
+      },
+      build: {
+        NODE_ENV : 'production',
+        DEST: '<%= app.dist %>',
+      }
+    },
+
     clean: {
       dev: '<%= app.temp %>',
       build: {
