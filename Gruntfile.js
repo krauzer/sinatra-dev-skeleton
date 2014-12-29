@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       options: {
         browserifyOptions: {
           debug: true,
-        transform: ['reactify','envify'] // ADD TRANSFORM OPTIONS
+        transform: ['reactify'] // ADD TRANSFORM OPTIONS
         }
       },
       dev: {
