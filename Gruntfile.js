@@ -138,6 +138,7 @@ module.exports = function(grunt) {
 grunt.registerTask('develop', [
     'clean:dev',
     'concat:styles',
+    'env:dev',
     'concurrent:dev'
   ]);
 
@@ -145,7 +146,10 @@ grunt.registerTask('build', [
     'clean:build',
     'useminPrepare',
     'concat:styles',
-    'cssmin:generated'
+    'cssmin:generated',
+    'browserify:production',
+    'uglify',
+    'env:build'
   ]);
 
 };
