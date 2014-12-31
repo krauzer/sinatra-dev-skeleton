@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     stylesSrc: "public/css/src/",
     stylesTemp: "tmp/styles/",
     stylesDist: "dist/styles/",
-    layoutSrc: "app/views/"
+    layoutSrc: "app/views/",
+    viewsDist: "dist/views/"
   };
 
   grunt.initConfig({
