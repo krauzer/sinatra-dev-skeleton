@@ -15,6 +15,7 @@ module.exports = function(grunt) {
     stylesTemp: "tmp/styles/",
     stylesDist: "dist/styles/",
     layoutSrc: "app/views/",
+    viewsSrc: "app/views/",
     viewsDist: "dist/views/"
   };
 
