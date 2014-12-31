@@ -42,6 +42,15 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      build: {
+        expand: true,
+        cwd: '<%= app.viewsSrc %>',
+        src: '{,*/}*.erb',
+        dest: '<%= app.viewsDist %>'
+      }
+    },
+
     concat: {
       options: {
         sourceMap: true
@@ -162,6 +171,7 @@ grunt.registerTask('build', [
     'cssmin:generated',
     'browserify:production',
     'uglify',
+    'copy:build',
     'rev:build',
     'env:build'
   ]);

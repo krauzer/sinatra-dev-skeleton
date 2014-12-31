@@ -12,6 +12,7 @@
     "grunt-concurrent": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "*",
