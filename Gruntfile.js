@@ -60,6 +60,15 @@ module.exports = function(grunt) {
        }
      },
 
+     filerev: {
+      build: {
+          src: [
+            '<%= app.codeDist %>*.js',
+            '<%= app.stylesDist %>*.css'
+          ]
+      }
+     },
+
      useminPrepare: {
       options: {
         dest: '<%= app.dist %>',
@@ -161,6 +170,7 @@ grunt.registerTask('build', [
     'browserify:production',
     'uglify',
     'copy:build',
+    'filerev:build',
     'env:build'
   ]);
 
