@@ -18,7 +18,6 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-env": "*",
-    "grunt-rev": "*",
     "grunt-usemin": "*",
     "jshint-stylish": "*",
     "load-grunt-tasks": "*",
