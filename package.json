@@ -1,0 +1,30 @@
+{
+  "name": "sinatra-dev-skeleton",
+  "version": "0.0.0",
+  "description": "work skeleton",
+  "repository": "https://github.com/krauzer/sinatra-dev-skeleton",
+  "main": "public/js/application.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-browserify": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-env": "*",
+    "grunt-filerev": "*",
+    "grunt-usemin": "*",
+    "jshint-stylish": "*",
+    "load-grunt-tasks": "*",
+    "reactify": "*",
+    "time-grunt": "*",
+    "watchify": "*"
+  },
+  "scripts": {}
+}
