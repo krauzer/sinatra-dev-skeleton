@@ -32,6 +32,6 @@ end
 guard 'livereload', host: '127.0.0.1' do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
-  watch(%r{public/.+\.(css|js|html)})
+  watch(%r{tmp/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
 end
