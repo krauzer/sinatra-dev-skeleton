@@ -43,7 +43,7 @@ configure :development do
 end
 
 configure :production do
-  set :views, File.join(Sinatra::Application.root, "dist", "views")
+  set :views, File.join(Sinatra::Application.root, "dist", "templates")
 end
 
 # Set up the controllers and helpers
