@@ -86,6 +86,14 @@ module.exports = function(grunt) {
       layout: "<%= app.layoutSrc %>layout.erb"
      },
 
+     usemin: {
+      options: {
+        assetsDirs:
+          ['<%= app.dist %>']
+      },
+      html: ['<%= app.viewsDist %>{,*/}*.erb']
+     },
+
     browserify: {
       options: {
         browserifyOptions: {
@@ -171,6 +179,7 @@ grunt.registerTask('build', [
     'uglify',
     'copy:build',
     'filerev:build',
+    'usemin',
     'env:build'
   ]);
 
