@@ -42,6 +42,10 @@ configure :development do
   set :public_folder, File.join(Sinatra::Application.root, "tmp")
 end
 
+configure :production do
+  set :views, File.join(Sinatra::Application.root, "dist", "views")
+end
+
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
