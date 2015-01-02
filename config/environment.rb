@@ -44,6 +44,7 @@ end
 
 configure :production do
   set :views, File.join(Sinatra::Application.root, "dist", "templates")
+  set :public_folder, File.join(Sinatra::Application.root, "dist")
 end
 
 # Set up the controllers via routes and helpers
