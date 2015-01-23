@@ -14,6 +14,7 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'better_errors' if development?
 
 require 'sinatra'
 require "sinatra/reloader" if development?
@@ -39,6 +40,8 @@ configure do
 end
 
 configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = APP_ROOT.to_s
   set :public_folder, File.join(Sinatra::Application.root, "tmp")
 end
 

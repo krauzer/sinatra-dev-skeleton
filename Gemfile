@@ -26,6 +26,7 @@ group :development do
   gem "rack-livereload"
   gem "guard-livereload"
   gem "pry"
+  gem "better_errors"
 end
 
 group :test, :development do
